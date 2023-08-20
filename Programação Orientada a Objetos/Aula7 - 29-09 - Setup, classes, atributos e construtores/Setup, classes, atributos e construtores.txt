@@ -1,0 +1,9 @@
+Estudos Programação Orientada a Objetos
+================================================
+
+Setup, classes, atributos e construtores
+
+Aula 02
+
+https://www.youtube.com/watch?v=rBBlZVUmxsA&list=PLDqnSpzNKDvnh-0RCYbIL5WzGCCFV1Ghm&index=2
+

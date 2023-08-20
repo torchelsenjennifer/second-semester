@@ -1,0 +1,7 @@
+Exercicio:
+
+1) Verificar se as frutas estão misturadas. "Ok apenas se misturadas"
+
+2) Remover apenas as frutas no click(não a div inteira)
+
+3) Impedir novos clicks  nas frutas após a verificação

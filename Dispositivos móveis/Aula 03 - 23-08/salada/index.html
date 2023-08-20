@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="salada.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Salada de Frutas</title>
+</head>
+<body>
+  <div class="container-fluid bg-primary text-white py-2 d-flex align-items-start">
+    <img src="salada.png" alt="Salada de Frutas" class="m-1 logo">
+    <div>
+      <h1>Jogo Salada de Frutas</h1>
+      <h2 class="fst-italic">Clique sobre as frutas...</i></h2>      
+    </div>
+  </div>
+  
+  <div class="text-center">
+    <h1 class="display-2 text-primary d-none" id="outOk">Parabéns!! Você acertou a receita</h1>
+    <h1 class="display-4 text-danger d-none" id="outErro">Receita Incorreta ou frutas não estão misturadas. Errou...</h1>
+       <!-- display none, apresenta depois -->
+  </div>
+
+  <div class="text-center my-4" id="divFrutas">
+    <img src="maca.jpg" alt="Maçã" id="imgMaca">
+    <img src="laranja.jpg" alt="Laranja" id="imgLaranja">
+    <img src="kiwi.jpg" alt="Kiwi" id="imgKiwi">
+    <img src="manga.jpg" alt="Morango" id="imgManga">
+    <img src="uva.jpg" alt="Uva" id="imgUva">
+  </div>
+
+  <div class="bg-danger py-3 text-white">
+    <h2 class="ms-1">Monte a salada de frutas com:</h2>
+    <h3 class="font-italic ms-1" id="outFrutas"></h3>
+  </div>
+
+  <div class="text-center my-4 altura" id="divJogo">
+  </div>
+
+  <button id="btVerificar" class="btn btn-primary btn-lg px-3 float-end me-3">Verificar</button>
+  <button id="btJogarNovamente" class="btn btn-success btn-lg px-3 float-start ms-3 d-none">Jogar Novamente</button>
+  <!-- display none, por isso iniciamente não aparece -->
+
+  <script src="index.js"></script>
+</body>
+</html>

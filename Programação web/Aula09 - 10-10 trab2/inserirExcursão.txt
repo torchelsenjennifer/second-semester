@@ -1,0 +1,10 @@
+Incluir Excursão
+================================
+{
+	"local_partida": "Colonia Cascata",
+	"destino": "Santa Cruz",
+	"lugares_total": 20,
+	"veiculo": "Van",
+	"data_partida": "2022-10-16 06:00:00",
+	"data_chegada": "2022-10-17 15:00:00"
+}

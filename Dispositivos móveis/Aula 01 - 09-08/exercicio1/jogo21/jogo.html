@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="black.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Black-Jack (Jogo dos 21)</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark mb-2">
+    <img src="black.png" alt="Jogo Black-Jack" width="80">
+    <h3 class="navbar-brand mt-2 ms-2">Jogo de Cartas: Black-Jack (Jogo dos 21)</h3>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mx-2">
+          <div class="card-header">
+            <h3 class="text-primary float-start">
+              <i class="bi bi-people"></i>
+              Suas Cartas
+            </h3>
+            <button class="btn btn-primary float-end" id="buttonComprar">
+              Comprar Carta
+            </button>
+          </div>
+          <div class="card-body" id="cardUsuario">
+          </div>
+          <div class="card-footer">
+            <h4 class="text-primary">
+              Total de Pontos:
+              <span class="fw-bold" id="outUsuario">0</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mx-2">
+          <div class="card-header">
+            <h3 class="text-danger float-start">
+              <i class="bi bi-laptop"></i>
+              Cartas do Computador
+            </h3>
+            <button class="btn btn-danger float-end" id="buttonApostar">
+              Apostar
+            </button>
+          </div>
+          <div class="card-body" id="cardComputador">
+          </div>
+          <div class="card-footer">
+            <h4 class="text-danger">
+              Total de Pontos:
+              <span class="fw-bold" id="outComputador">0</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-4 mt-2" id="outResultado">
+  </div>
+
+  <script src="jogo.js"></script>
+</body>
+
+</html>

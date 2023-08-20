@@ -1,0 +1,30 @@
+.card-body {
+    height: 150px;
+}
+
+#card-body-filmes img {
+    width: 80px;
+    margin-right: 2px;
+}
+
+@media (min-width: 576px) {
+    .card-body {
+        height: 180px;
+    }
+
+    #card-body-filmes img {
+        width: 100px;
+        margin-right: 3px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-body {
+        height: 200px;
+    }
+
+    #card-body-filmes img {
+        width: 120px;
+        margin-right: 4px;
+    }
+}

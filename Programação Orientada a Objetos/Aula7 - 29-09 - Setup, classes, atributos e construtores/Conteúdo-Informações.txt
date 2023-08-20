@@ -1,0 +1,20 @@
+PROGRAMAÇÃO ORIENTADA A OBJETOS 
+
+=======================================================================================================
+
+Comandos Orientação Objetos
+
+======================================================================================================
+
+*- npm i -g typescript*     => intalação global do typescrit
+*- npm init -y*             => inicializar package.json para realizar umas dependencias
+*- tsc --init*              => criar arquivo tscconfig.json(contem as configurações do typescript)
+*-npm i --save-dev*         => cria o package-lock.json
+- tsc                       => faz compilar e criar um arquivo .JS  
+- tsc -w                    => para compilar arquivo .ts
+- node NomeAquivo.js        => para compilar arquivo .js
+- npm i -g ts-node          => para compilar sem criar a pasta .js
+*- ts-node "nome do arquivo.ts"*  => compilar o arquivo .ts sem gerar o .js
+*- npm i prompt-sync*         => comando para trabalhar com o terminal
+*- npm i @types/prompt-sync*  => instala os tipos de biblioteca do pormpt sync
+======================================================================================================        

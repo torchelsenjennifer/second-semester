@@ -1,0 +1,32 @@
+.logo {
+  width: clamp(40px, 15vw, 70px);
+  /* width: clamp( 15vw); Não é recomendado */ 
+}
+/* clamp = vw = 15% de largura  */
+
+h1 {
+  font-size: clamp(14px, 8vw, 30px);
+}
+
+h2 {
+  font-size: clamp(10px, 6vw, 20px);
+}
+
+h3 {
+  font-size: clamp(8px, 4vw, 16px);
+}
+
+#divFrutas > img {
+  cursor: pointer;
+  width: clamp(70px, 12vw, 120px);
+}
+
+#divJogo > img {
+  cursor: pointer; 
+  /* ressaltar as imagens */
+  width: clamp(40px, 10vw, 60px);
+}
+
+.altura {
+  height: 15vh;
+}

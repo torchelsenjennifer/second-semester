@@ -1,0 +1,5 @@
+ARQUIVOS NECESSARIOS PARA INICIAR UM PROJETO
+==========================================================
+
+node              => node -v
+Criando projeto   => npx create-react-app nome do progeto

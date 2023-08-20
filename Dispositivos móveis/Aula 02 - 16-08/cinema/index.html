@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="cine.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Cine Quiz</title>
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <img src="cine2.webp" alt="Cine Quiz" class="w-25 m-3 ms-4" />
+      <div>
+        <h1 class="fw-bold border-bottom p-2">
+          Cine Quiz
+          <span class="d-none d-md-inline">: Teste seus conhecimentos</span>
+        </h1>
+        <h2 class="fst-italic m-2">Filmes em Cartaz</h2>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 mt-3">
+          <div class="card mx-2">
+            <div class="card-header">
+              <h3 class="text-primary">
+                <i class="bi bi-patch-question-fill"></i>
+                Pergunta:
+              </h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-floating mb-2 mt-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inTitulo"
+                    placeholder="Título do Filme"
+                    required
+                  />
+                  <label for="inTitulo">Qual filme está em cartaz?</label>
+                </div>
+                <div class="float-end">
+                  <button type="submit" class="btn btn-primary mb-3">
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <h4 class="text-primary float-end">
+                Chances Restantes:
+                <span class="fw-bold" id="chances">8</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-3">
+          <div class="card mx-2">
+            <div class="card-header">
+              <h3 class="text-success">
+                <i class="bi bi-patch-check-fill"></i>
+                Acertos
+              </h3>
+            </div>
+            <div class="card-body" id="card-body-filmes">              
+            </div>
+            <div class="card-footer">
+              <h4 class="text-success float-end">
+                Total de Acertos:
+                <span class="fw-bold" id="acertos">0</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-danger fs-5 fst-italic m-4 fw-bold">Incorretos: 
+      [<span id="outErros"></span>]
+    </p>
+
+    <script src="index.js"></script>
+  </body>
+</html>

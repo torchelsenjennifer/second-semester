@@ -1,0 +1,165 @@
+DROP DATABASE IF EXISTS aula14;
+CREATE DATABASE aula14;
+USE aula14;
+CREATE TABLE drinks
+(
+    preco DECIMAL(9,2),
+    nome VARCHAR(40)
+);
+
+ALTER TABLE drinks
+ADD COLUMN id INT FIRST,
+ADD PRIMARY KEY (id);
+
+ALTER TABLE drinks
+ADD COLUMN nota INT NOT NULL after preco;
+
+
+--altera o nome da tabela
+ALTER TABLE drinks  
+RENAME TO bebibas;
+
+-- altera o nome para descricao
+ALTER TABLE bebidas
+CHANGE COLUMN nome descricao VARCHAR(50) NOT NULL;
+
+--
+ALTER TABLE bebidas
+MODIFY COLUMM descricao VARCHAR(100);
+
+--exclusao de campo
+ALTER TABLE bebidas
+DROP COLUMN nota;
+
+--Exclusao do status de chave primaria
+ALTER TABLE bebidas
+DROP PRIMARY KEY;
+
+
+--===========================================================================================================================================
+DROP DATABASE IF EXISTS atividade;
+CREATE DATABASE atividade;
+USE atividade;
+--CRIACAO DA TABELA veiculo
+CREATE TABLE veiculo
+(
+    cor VARCHAR(15),
+    ano VARCHAR(4),
+    fabricante VARCHAR(20),
+    mod_ VARCHAR(20),
+    valordecusto DECIMAL(9,2)
+);
+
+-------------------------------------------------------------------
+--inserir campos
+INSERT INTO veiculo (cor, ano, fabricante, mod_, valordecusto) VALUES("Prata", 1998, "Porsche", "Boxter", 17992.54);
+INSERT INTO veiculo (cor, ano, fabricante, mod_, valordecusto) VALUES(NULL, 2000, "Jaguar", "XJ", 15995.00);
+INSERT INTO veiculo (cor, ano, fabricante, mod_, valordecusto) VALUES("Vermelho", 2002, "Cadilac", "Escalade", 40215.90);
+
+---------------------------------------------------------------------------------------------------------------------------
+--ALTERAÇÃO DE VALORDECUSTO PARA VALOR
+ALTER TABLE veiculo
+CHANGE COLUMN valordecusto valor DECIMAL(9,2);
+
+---------------------------------------------------------------------------------------------
+--ALTERA MOD_ PARA MODELO
+ALTER TABLE veiculo
+CHANGE COLUMN mod_ modelo VARCHAR(20);
+
+------------------------------------------------------------------------------
+--Cria Campo chassi
+ALTER TABLE veiculo
+ADD COLUMN chassi VARCHAR(30) FIRST;
+
+------------------------------------------------------------------------------
+--Fabricante depois da coluna chassi
+ALTER TABLE veiculo
+MODIFY COLUMN fabricante VARCHAR(20) after chassi;
+
+------------------------------------------------------------------------------
+--Modelo depois da coluna fabricante
+ALTER TABLE veiculo
+MODIFY COLUMN modelo VARCHAR(20) after fabricante;
+
+------------------------------------------------------------------------------
+-- Adiciona a coluna ID e realiza AUTO INCREMENT
+ALTER TABLE veiculo 
+ADD PRIMARY KEY (id),
+ADD COLUMN id INT NOT NULL AUTO_INCREMENT FIRST;
+
+----------------------------------------------------------------------------------------
+-- Adiciona os valores ao Chassi
+UPDATE veiculo
+SET chassi = "RNKLK66N33G213481"
+WHERE id=1;
+
+UPDATE veiculo
+SET chassi = "SAEDA44B175B04113"
+WHERE id=2;
+
+UPDATE veiculo
+SET chassi = "3GYEK63NT2G280668"
+WHERE id=3;
+
+---------------------------------------------------------------------------------------------
+--4) Alterar a coluna fabricante para que tenha o tipo VARCHAR(50) e fique em ultimo lugar na tabela;
+
+ALTER TABLE veiculo
+MODIFY COLUMN fabricante VARCHAR(50) after valor ;
+
+--5) Criar uma tabela dono, que representara os donos dos veiculos. Nesta tabela inclua os campos cpf, nome, telefone, cidade.
+
+--CRIACAO DA TABELA dono
+
+CREATE TABLE dono
+(
+    cpf VARCHAR(14),
+    nome VARCHAR(40),
+    telefone VARCHAR(17),
+    cidade VARCHAR(20)
+);
+
+--6) Insira 3 donos de veiculos preenchendo todas as informacoes da tabela dono;
+--inserir campos
+INSERT INTO dono (cpf, nome, telefone, cidade) VALUES("339.590.330-36", "Tiago Domingues Ferreira", "+55(53)981052090", "Cangucu");
+INSERT INTO dono (cpf, nome, telefone, cidade) VALUES("595.710.910-06", "Jonas Schwanz Torchelsen", "+55(53)981052091", "Sao Lourenco");
+INSERT INTO dono (cpf, nome, telefone, cidade) VALUES("343.915.220-04", "Jennifer Schwanz Torchelsen", "+55(53)981052092", "Morro Redondo");
+
+--7) Adicione outra coluna na tabela dono com o nome id_dono para que fique na esquerda da tabela, antes de todas as colunas, e fique com a propriedade AUTO_INCREMENT e
+--PRIMARY KEY definidas.
+
+ALTER TABLE dono 
+ADD PRIMARY KEY (id_dono),
+ADD COLUMN id_dono INT NOT NULL AUTO_INCREMENT FIRST;
+
+--8) Altere o nome da tabela dono para pessoa;
+ALTER TABLE dono
+RENAME TO pessoa;
+
+-- id_dono para id_pessoa
+ALTER TABLE pessoa 
+CHANGE COLUMN id_dono id_pessoa  INT NOT NULL AUTO_INCREMENT;
+
+--9) Elimine todos os registros da tabela pessoa;
+
+TRUNCATE TABLE pessoa;
+
+--10) Insira novamente os registros que foram excluidos na tabela pessoa (copie novamente o seu script no console);
+
+INSERT INTO pessoa (cpf, nome, telefone, cidade) VALUES("339.590.330-36", "Tiago Domingues Ferreira", "+55(53)981052090", "Cangucu");
+INSERT INTO pessoa (cpf, nome, telefone, cidade) VALUES("595.710.910-06", "Jonas Schwanz Torchelsen", "+55(53)981052091", "Sao Lourenco");
+INSERT INTO pessoa (cpf, nome, telefone, cidade) VALUES("343.915.220-04", "Jennifer Schwanz Torchelsen", "+55(53)981052092", "Morro Redondo");
+
+
+--11) Adicione uma nova coluna na tabela pessoa com o nome id_veiculo, e insira 3 novos registros completos de donos com IDs de VEICULOS.
+ALTER TABLE pessoa 
+ADD COLUMN id_veiculo INT;
+
+ALTER TABLE pessoa 
+ADD CONSTRAINT fk_veiculo 
+FOREIGN KEY ( id_veiculo ) 
+REFERENCES veiculo ( id ) ;
+
+INSERT INTO pessoa (cpf, nome, telefone, cidade, id_veiculo) VALUES("339.590.330-36", "Joao Lucas Vargas", "+55(53)981052090", "Cangucu", 1);
+INSERT INTO pessoa (cpf, nome, telefone, cidade, id_veiculo) VALUES("339.590.330-36", "Lucas Joao Bento", "+55(53)981052090", "Cangucu", 2);
+INSERT INTO pessoa (cpf, nome, telefone, cidade, id_veiculo) VALUES("339.590.330-36", "Juliana Martins", "+55(53)981052090", "Cangucu", 3);

@@ -1,0 +1,23 @@
+Estudos Programação Orientada a Objetos
+==============================================================================================
+
+Encapsulamento
+
+Aula 04
+
+https://www.youtube.com/watch?v=JI_HL9499ZU&list=PLDqnSpzNKDvnh-0RCYbIL5WzGCCFV1Ghm&index=4
+
+================================================================================================
+
+Sala de Aula
+
+Métodos de acesso - acessar um método que é privado e é preciso print uma váriavel
+private _name
+
+public get nome(): string{
+return this._name;
+}
+
+public set nome(nome:string){
+return 
+}

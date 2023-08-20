@@ -1,0 +1,3 @@
+3ss = começa juntas
+3ff = termina juntas
+3  = uma a pos a outra

@@ -1,0 +1,214 @@
+DROP TABLE IF EXISTS usuario;
+CREATE TABLE IF NOT EXISTS usuario (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  cidade_id INT(11) NOT NULL,
+  PRIMARY KEY (id));
+  
+desc usuario;
+
+
+CREATE TABLE IF NOT EXISTS venda ( -- cria a tabela venda
+  data DATE NOT NULL, -- campo
+  hora TIME NOT NULL, -- campo
+  valorIngresso DECIMAL(10,2) NOT NULL, -- campo
+  sessao_id INT(11)  NOT NULL, -- adiciona outro campo
+  FOREIGN KEY (sessao_id) REFERENCES sessao (id));
+  
+  desc venda;
+  
+ALTER TABLE venda
+ADD COLUMN usuario_id INT(11);
+
+ desc venda;
+ 
+ALTER TABLE venda
+ADD CONSTRAINT fk_venda_usuario -- nome do relacionamento entre venda e usuario, precisão
+FOREIGN KEY (usuario_id) REFERENCES usuario (id);
+
+ desc venda;
+ 
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 1, 10);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 2, 10);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 3, 10);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 10);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 4, 10);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 1);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 2);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 3);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 4);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 5);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 6);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 7);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 8);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 9);
+INSERT INTO venda (data, hora, valorIngresso, sessao_id, usuario_id) VALUES ('2022-11-18','16:20:00', 12.5, 5, 10);
+
+
+
+-- 2) A) Crie uma consulta que liste todos os nomes dos filmes, gêneros e duração, ordenados por gênero e em seguida em ordem decrescente de tituloOriginal de
+-- Filme;
+
+select filme.tituloOriginal, filme.tituloPortugues, filme.duracao, genero.nome as genero
+from filme
+inner join genero_filme on filme.id = genero_filme.filme_id
+inner join genero on genero_filme.genero_id = genero.id
+ORDER  BY  genero asc,
+		   filme.tituloOriginal desc;
+
+select * from filme inner join genero_filme on filme.id = genero_filme.filme_id
+inner join genero on genero_filme.genero_id = genero.id;
+select * from genero_filme;
+select * from genero;
+
+SELECT filme.tituloOriginal, filme.tituloPortugues     
+FROM   filme
+ORDER  BY filme.tituloOriginal DESC;
+
+SELECT genero.nome FROM genero
+WHERE genero.nome IN ("Aventura","Ficção","Faroeste", "Ação");
+
+SELECT filme.tituloOriginal,genero.nome,filme.duracao
+FROM filme
+INNER JOIN genero_filme ON genero_filme.filme_id = filme.id
+INNER JOIN genero ON genero.id = genero_filme.genero_id
+WHERE filme.duracao BETWEEN 70 AND 130;
+ 
+select * FROM venda;
+
+select * from venda
+INNER JOIN sessao on sessao.id = venda.sessao_id;
+
+
+select tituloOriginal, tituloPortugues from filme
+where id NOT IN (select filme_id from venda
+INNER JOIN sessao on sessao.id = venda.sessao_id
+group by filme_id);
+    
+	
+select * from filme;
+select * from sessao;
+
+select sum(valorIngresso) as totalVendidoPorFilme, count(valorIngresso) as totalIngressosPorFilme, filme_id, filme.tituloPortugues as nomeDoFilme
+from venda
+INNER JOIN sessao on sessao.id = venda.sessao_id
+INNER JOIN filme on filme.id = sessao.filme_id
+group by filme_id;
+
+select count(valorIngresso) as totalIngressosPorFilme, filme_id, LEFT(filme.tituloPortugues, 5) as nomeDoFilme
+from venda
+INNER JOIN sessao on sessao.id = venda.sessao_id
+INNER JOIN filme on filme.id = sessao.filme_id
+group by filme_id;
+
+select * from cinema;
+
+select nomeFantasia, LENGTH(nomeFantasia)
+from cinema;
+
+select nomeFantasia, LEFT(nomeFantasia, 5)
+from cinema;
+
+select * from filme;
+select * from elenco;
+select * from ator;
+
+select  filme.tituloPortugues, count(elenco.ator_id) as totalAtores
+from filme
+INNER JOIN elenco on filme_id = filme.id
+group by filme.tituloPortugues;
+
+select * from genero_filme;
+
+SELECT filme.tituloOriginal, genero.nome, filme.duracao
+FROM filme
+INNER JOIN genero_filme ON genero_filme.filme_id = filme.id
+INNER JOIN genero ON genero.id = genero_filme.genero_id
+WHERE genero.nome IN ("Suspense");
+
+update filme
+    set duracao = 150 
+    where id = 4;
+ 	
+update filme
+    set duracao = (44 + duracao)
+    where 
+			id IN(SELECT f.id
+			FROM filme as f
+			INNER JOIN genero_filme ON genero_filme.filme_id = f.id
+			INNER JOIN genero ON genero.id = genero_filme.genero_id
+			WHERE genero.nome IN ("Suspense") );
+    
+	
+    
+			
+    
+    
+    
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+  
+
+
+
+

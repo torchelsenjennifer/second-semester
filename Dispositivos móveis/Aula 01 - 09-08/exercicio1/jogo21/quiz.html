@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="quiz.css">
+    <title>CineQuiz</title>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="cinema.png" alt="primeira imagem" class="img1" width="100">
+            </div>
+            <div class="col-md-6">
+                <h1>Cine Quiz: Teste seus conhecimentos</h1>
+                <h2>Filmes em cartaz</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mx-2">
+              <div class="card-header">
+                <h3 class="text-primary float-start">
+                  <i class="bi bi-people"></i>
+                  Pergunta:
+                </h3>
+              </div>
+              <div class="card-body" id="cardUsuario">
+              </div>
+              <div class="card-footer">
+                <h4 class="text-primary">
+                  Chances Restantes:
+                  <span class="fw-bold" id="outUsuario">0</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mx-2">
+              <div class="card-header">
+                <h3 class="text-danger float-start">
+                  <i class="bi bi-laptop"></i>
+                 Acertos
+                </h3>
+              </div>
+              <div class="card-body" id="cardComputador">
+              </div>
+              <div class="card-footer">
+                <h4 class="text-danger">
+                  Total de Acertos:
+                  <span class="fw-bold" id="outComputador">0</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+</body>
+</html>

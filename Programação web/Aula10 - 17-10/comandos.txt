@@ -1,0 +1,5 @@
+Aula 17 - Programação Web
+================================================================
+
+npm i nodemailer    => comonado para ativar email
+npm config set strict-ssl false  ==>  comando para destravar

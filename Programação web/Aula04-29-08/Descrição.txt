@@ -1,0 +1,11 @@
+Aula 3 - 29 - 08
+Monitorias
+Terça e quintas - 8:15 às 9 h
+
+==============================================================
+npx knex init - para inicializar o knex
+select
+insert
+alterar = update
+excluir = delete
+filtros = where

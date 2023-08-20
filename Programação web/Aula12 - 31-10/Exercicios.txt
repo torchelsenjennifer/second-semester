@@ -1,0 +1,6 @@
+Exercicio
+========================================================================
+- Criar uma rota que recupe o total de votos confirmados 
+e não confirmados da tabela de votos.
+- Projetar(e a alterar as tabelas, se necessário) quais dados gerenciais 
+para montagem de gráficos  podem ser recuperados do seu projeto. 

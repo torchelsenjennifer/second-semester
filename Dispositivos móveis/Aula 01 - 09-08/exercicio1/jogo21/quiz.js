@@ -1,0 +1,1 @@
+const chances = document.querySelector("#outUsuario")

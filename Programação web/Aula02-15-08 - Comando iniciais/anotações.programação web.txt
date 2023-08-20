@@ -1,0 +1,41 @@
+Aula 02 -- Programação Web
+
+Comandos necessários para ativar todas propriedades do express:
+Instala node_modulos e jsons   ==>  npm install node-modules
+Instala cria o json  ==>  npm init -y
+Instala o express    ==>  npm i express
+Ativar o servidor    ==>  npm i --save-dev nodemon 
+
+npx nodemon app ==> rodar servidor
+
+(localização)localhost:3000 --> simulando no navegador, roda as informações apenas nesse momento, devemos sempre recarregar
+
+Extensão sqlite3	   ==> npm i better-sqlite3
+Instalar KNEX        ==> npm knex init
+Instalar CORS        ==> npm install cors
+
+
+
+=======================================================================================================================================
+vinhos.js é o arquivo que cria um conjunto de rotas contendo recursos
+node app --> para rodar 
+
+nodemon --> escutando as mudanças 
+
+import express from 'express' --> recurso mais resente e assim realizar a mudança no packge.json
+
+ 
+descrição do navegador = http://localhost:3000/aula2
+
+insomnia --> testar aplicações back end
+
+exercicio
+
+criar as  rotas para:
+
+1- Excluir um registro (delete)
+2- Alterar um registro (put)
+3- Pesquisar por tipo do vinho, com o tipo
+sedo passado na rota
+4-Pesquisar por intervao de preço
+

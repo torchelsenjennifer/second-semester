@@ -1,0 +1,24 @@
+Comando Banco de Dados
+=========================================================================================================================================================================
+*mysql -u root*     ==> Acessar mysql com o usuário root 
+mysql -u root -p  ==> Acessar mysql com o usuário root com senha
+*show databases;*    ==> visualizar os bancos 
+CREATE DATABASE Exemplo;     ===> Cria um banco de dados com o nome Exemplo
+DROP DATABASE Exemplo;    ==> Apaga um banco de dados
+*USE Exemplo;*        ===> Seliciona o banco Exemplo para manipular
+CREATE TABLE tabela_exemplo;    ===> cria uma tabela com o nome tabela_exemplo
+CREATE TABLE teste(codigo INT(11), nome CHAR(15), email VARCHAR(25));   ====> cria uma tabela com o nome teste com os campos
+SHOW tables;  ===> lista todas as tabelas existentes
+SHOW COLUMNS FROM teste;  ====> Lista as colunas da tabela teste
+*DESC teste;* ==> Mostra a estrutura da tabela
+INSERT INTO teste (codigo, nome, email) VALUES (25,'jennifer','jennifertorchelsen@gmail.com');   ==> inclui as informações no campo da tabela teste
+SELECT * FROM teste;  ==> mostra os dados que estão dentro dos campos
+SELECT nome FROM teste;  ==> seleciona o campo nome da tabela teste
+=========================================================================================================================================================================
+ ATUALIZA A INFORMAÇÃO DE UM CAMPO NO BANCO TESTE
+UPDATE teste
+	SET nome = 'jessica'
+WHERE codigo = 25;
+=========================================================================================================================================================================
+SELECT * FROM teste ORDEM BY nome; =====> ordena por nome
+SELECT MAX(SALARIO) FROM empregado   ===> maximo salário

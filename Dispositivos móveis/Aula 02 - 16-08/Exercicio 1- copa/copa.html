@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="copa.css">
+    <title>Copa do Brasil</title>
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- display flex ---d-flex -->
+        <div>
+            <h1>Copa do Brasil - 2022</h1>
+            <h2>SemiFinas - Seu palpite</h2>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <form>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row border d-flex ">
+                        <div class="col-md-5 mt-3">
+
+                            <img class="imagem" src="imagens/flamengo.png" alt="" >
+                            <h2>Flamengo</h2>
+                            <input type="text" id="jogoA">
+
+                        </div>
+
+                        <div class="col-md-2 align-self-center">
+                            <h1>X</h1>
+                        </div>
+
+                        <div class="col-md-5 mt-3">
+
+                            <img class="imagem" src="imagens/Atletico.png" alt="">
+                            <h2>Atlético PR</h2>
+                            <input type="text" id="jogoB">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <!-- espaçamento -->
+                </div>
+
+                <div class="col-md-5">
+                    <div class="row border d-flex ">
+                        <div class="col-md-5 mt-3">
+
+                            <img class="imagem" src="imagens/saopaulo.png" alt="">
+                            <h2>São Paulo</h2>
+                            <input type="text" id="jogoC">
+
+                        </div>
+
+                        <div class="col-md-2 align-self-center">
+                            <h1>X</h1>
+                        </div>
+
+                        <div class="col-md-5 mt-3">
+
+                            <img class="imagem" src="imagens/gremio.png" alt="">
+                            <h2>Grêmio</h2>
+                            <input type="text" id="jogoD">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-xl d-flex justify-content-end">
+                <button class="btn btn-primary mt-5" type="submit" id="botao"> Apostar</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="container- d-flex justify-content-center">
+        <h1>FINAL</h1>
+    </div>
+    <!-- Resultado finl dos jogos -->
+    <div class="container d-flex  justify-content-center ">
+        <div class="row border ">
+            <div class="col-md-5 mt-3">
+
+                <img class="imagem" src="" alt="" id="logoganhadorA">
+                <h2 id="vencedorA"></h2>
+
+            </div>
+
+            <div class="col-md-2 align-self-center">
+                <h1>X</h1>
+            </div>
+
+            <div class="col-md-5 mt-3">
+
+                <img class="imagem" src="" alt="" id="logoganhadorB">
+                <h2 id="vencedorB" ></h2>
+
+            </div>
+        </div>
+    </div>
+    <script src="copa.js"></script>
+</body>
+
+</html>

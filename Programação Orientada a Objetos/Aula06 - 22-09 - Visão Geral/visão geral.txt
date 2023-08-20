@@ -1,0 +1,18 @@
+Estudos Programação Orientada a Objetos
+================================================
+
+Visão Geral
+
+Aula 01
+
+https://www.youtube.com/watch?v=G5TOitIft8o&t=704s
+
+EX: produto comprado por cliente 
+
+Identidade = CLASSE = produto
+Caracteristica = ATRIBUTO = nome, quantidade etc
+Ações/comportamentos = MÉTODOS = dar baixa de estoque
+
+OBJETO = classe empresa = objeto empresa google/ empresa senac
+
+

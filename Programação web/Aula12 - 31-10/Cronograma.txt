@@ -1,0 +1,11 @@
+Cronograma
+
+========================================================
+
+- 31/10: Geração de dados estatísticos(gráfico, controle gerenciais)
+- 7/11: Geração de PDFs
+- 14/11: Ajustes Finais no projeto de Exemplo (exclusão da foto, alterações)
+- 21/11: Conclusão do Trabalho #2
+- 28/11: Apresentação do Trabalho #2
+- 05/12: Pendências / Reapresentração do Trabalho #2
+- 12/12: Recuperação dos Trabalhos
